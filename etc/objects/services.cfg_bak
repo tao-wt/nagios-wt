@@ -1,0 +1,183 @@
+define service{  
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     check-host-alive
+        check_command           check-host-alive
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     Partition opt
+        check_command           check_remote_host!check_/opt
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     webmanager
+        check_command           check_cmbc!9716
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     pub_platform
+        check_command           check_cmbc!8110
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     livecontrol
+        check_command           check_cmbc!9151
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     liveroom
+        check_command           check_cmbc!9067
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     liveinterface
+        check_command           check_cmbc!9131
+        }
+
+
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     Partition home
+        check_command           check_remote_host!check_/home
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     Load
+        check_command           check_remote_host!check_load
+        }
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.102
+        service_description     Processes
+        check_command           check_remote_host!check_procs
+        }
+
+define service{  
+        use                     local-service
+        host_name               ST-99.12.90.5
+        service_description     check-host-alive
+        check_command           check-host-alive
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.5
+        service_description     Processes
+        check_command           check_remote_host!check_procs
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.5
+        service_description     Partition opt
+        check_command           check_remote_host!check_/opt
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.5
+        service_description     Partition home
+        check_command           check_remote_host!check_/home
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.5
+        service_description     Load
+        check_command           check_remote_host!check_load
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.5
+        service_description     cgc_2
+        check_command           check_cmbc!6012
+        }
+
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.6
+        service_description     check-host-alive
+        check_command           check-host-alive
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.6
+        service_description     Processes
+        check_command           check_remote_host!check_procs
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.6
+        service_description     Partition opt
+        check_command           check_remote_host!check_/opt
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.6
+        service_description     Partition home
+        check_command           check_remote_host!check_/home
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.6
+        service_description     Load
+        check_command           check_remote_host!check_load
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.8
+        service_description     check-host-alive
+        check_command           check-host-alive
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.8
+        service_description     Processes
+        check_command           check_remote_host!check_procs
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.8
+        service_description     Partition opt
+        check_command           check_remote_host!check_/opt
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.8
+        service_description     Partition home
+        check_command           check_remote_host!check_/home
+        }
+
+define service{
+        use                     local-service
+        host_name               ST-99.12.90.8
+        service_description     Load
+        check_command           check_remote_host!check_load
+        }

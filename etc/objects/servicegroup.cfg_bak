@@ -1,0 +1,9 @@
+define servicegroup{
+       servicegroup_name        Processes and Load
+       members                  ST-99.12.90.100,Current Load,ST-99.12.90.100,Total Processes,ST-99.12.90.102,Load,ST-99.12.90.102,Processes,ST-99.12.90.5,Load,ST-99.12.90.5,Processes,ST-99.12.90.6,Load,ST-99.12.90.6,Processes,ST-99.12.90.8,Load,ST-99.12.90.8,Processes
+}
+
+define servicegroup{
+       servicegroup_name        Partition
+       members                  ST-99.12.90.100,Partition home,ST-99.12.90.100,Partition opt,ST-99.12.90.102,Partition home,ST-99.12.90.102,Partition opt,99.12.90.5,Partition home,ST-99.12.90.5,Partition opt,ST-99.12.90.6,Partition home,ST-99.12.90.6,Partition opt,ST-99.12.90.8,Partition home,ST-99.12.90.8,Partition opt,
+}
