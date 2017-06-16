@@ -2,9 +2,10 @@
 
 from socket import *
 from time import ctime
+from sys import argv
 
-HOST = '99.12.90.100'
-PORT = 9716
+HOST = '%s'%argv[1]
+PORT = int(argv[2])
 BUFSIZE = 1024
 ADDR = (HOST,PORT)
 
