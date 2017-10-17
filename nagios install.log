@@ -1,0 +1,344 @@
+999  yum install nagios
+ 1000  yum makecache fast
+ 1001  yum install nagios
+ 1002  file /usr/libexec/urlgrabber-ext-down
+ 1003  vi +28 /usr/libexec/urlgrabber-ext-down
+ 1004  yum install nagios
+ 1005  vi +28 /usr/libexec/urlgrabber-ext-down
+ 1006  yum install nagios
+ 1007  vi +69 /usr/libexec/urlgrabber-ext-down
+ 1008  yum install nagios
+ 1009  yum install gcc
+ 1010  python --version
+ 1011  whereis python
+ 1012  ll /usr/bin/python
+ 1013  vi +69 /usr/libexec/urlgrabber-ext-down
+ 1014  ll /usr/bin/python
+ 1015  vi +69 /usr/libexec/urlgrabber-ext-down
+ 1016  yum install nagios
+ 1017  yum -y install gcc glibc glibc-common gd gd-devel
+ 1018  ll
+ 1019  yum -y install gcc glibc glibc-common gd gd-devel
+ 1020  ll /usr/
+ 1021  ll -a /usr/
+ 1022  ll -a /usr/bin/
+ 1023  yum install -y gcc glibc glibc-common gd gd-devel xinetd openssl-devel
+ 1024  rpm -Va --nofiles --nodigest
+ 1025  yum install -y gcc glibc glibc-common gd gd-devel xinetd openssl-devel
+ 1026  yum install -y gcc glibc glibc-common gd gd-devel xinetd openssl-devel --skip-broken
+ 1027  ll /var/cache/yum/
+ 1028  ll /var/cache/yum/x86_64/
+ 1029  ll /var/cache/yum/x86_64/7
+ 1030  ll /var/cache/yum/x86_64/7/nsn
+ 1031  ll
+ 1032  mkdir /home/yum
+ 1033  yum install -y gcc glibc glibc-common gd gd-devel xinetd openssl-devel --skip-broken --downloaddir=/home/yum
+ 1034  yum clean all
+ 1035  yum install -y gcc glibc glibc-common gd gd-devel xinetd openssl-devel
+ 1036  yum install -y gcc glibc glibc-common gd gd-devel xinetd openssl-devel  --skip-broken
+ 1037  yum install -y gcc glibc glibc-common gd gd-devel xinetd openssl-devel --downloadonly --downloaddir=/home/yum/
+ 1038  yum install -y gcc glibc glibc-common gd gd-devel xinetd openssl-devel --skip-broken --downloadonly --downloaddir=/home/yum
+ 1039  useradd -s /sbin/nologin nagios
+ 1040  mkdir /usr/local/nagios
+ 1041  chown -R nagios.nagios /usr/local/nagios
+ 1042  cd /home/yum/
+ 1043  ll
+ 1044  tar -xf nagios-4.3.4.tar.gz
+ 1045  ll
+ 1046  cd nagios-4.3.4/
+ 1047  ll
+ 1048  ./configure --prefix=/usr/local/nagios
+ 1049  make all
+ 1050  make install
+ 1051  make install-init
+ 1052  make install-commandmode
+ 1053  make install-config
+ 1054  chkconfig --add nagios
+ 1055  chkconfig --level 35 nagios on
+ 1056  chkconfig --list nagios
+ 1057  ll /usr/local/nagios
+ 1058  ll
+ 1059  cd ..
+ 1060  ll
+ 1061  tar -xf nagios-plugins-2.2.1.tar.gz
+ 1062  ll
+ 1063  cd nagios-
+ 1064  cd nagios-plugins-2.2.1/
+ 1065  ll
+ 1066  ./configure --prefix=/usr/local/nagios
+ 1067  make && make install
+ 1068  cd ..
+ 1069  ll
+ 1070  wget http://archive.apache.org/dist/httpd/httpd-2.4.28.tar.gz
+ 1071  ll
+ 1072  tar -xf httpd-2.4.28.tar.gz
+ 1073  ll
+ 1074  cd httpd-2.4.28/
+ 1075  ll
+ 1076  ./configure --prefix=/usr/local/apache2
+ 1077  cd ..
+ 1078  ll
+ 1079  tar -xf apr-1.6.2.tar.gz
+ 1080  ll
+ 1081  cd apr-1.6.2/
+ 1082  ll
+ 1083  ./configure --prefix=/usr/local/apr
+ 1084  make && make install
+ 1085  cd ..
+ 1086  ll
+ 1087  cd httpd-2.4.28/
+ 1088  ll
+ 1089  ./configure --prefix=/usr/local/apache2
+ 1090  cd ..
+ 1091  ll
+ 1092  tar -xf apr-util-1.6.0.tar.gz
+ 1093  ll
+ 1094  cd apr-util-1.6.0/
+ 1095  ll
+ 1096  ./configure --prefix=/usr/local/apr-util -with- apr=/usr/local/apr/bin/apr-1-config
+ 1097  ll /usr/local/apr
+ 1098  ll /usr/local/apr/bin/
+ 1099  cat configure | grep apr
+ 1100  ./configure --prefix=/usr/local/apr-util -with- apr=/usr/local/apr/bin/apr-1-config
+ 1101  ll /usr/local/apr/bin/
+ 1102  ./configure --prefix=/usr/local/apr-util --with apr=/usr/local/apr/bin/apr-1-config
+ 1103  ./configure --help
+ 1104  ./configure --prefix=/usr/local/apr-util -with-apr=/usr/local/apr/bin/apr-1-config
+ 1105  make && make install
+ 1106  yum install expat-devel
+ 1107  cd ..
+ 1108  ll
+ 1109  tar -xf expat-2.0.1.tar.gz
+ 1110  ll
+ 1111  cd expat-2.0.1/
+ 1112  ll
+ 1113  ./configure
+ 1114  make
+ 1115  make install
+ 1116  cd ..
+ 1117  ll
+ 1118  cd apr-util-1.6.0/
+ 1119  ll
+ 1120  make && make install
+ 1121  cd ..
+ 1122  ll
+ 1123  cd httpd-2.4.28/
+ 1124  ./configure --prefix=/usr/local/apache2
+ 1125  ./configure --help
+ 1126  ./configure --help | grep apr
+ 1127  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util
+ 1128  cd ..
+ 1129  ll
+ 1130  tar -xf pcre-8.41.tar.gz
+ 1131  cd pcre-8.41/
+ 1132  ll
+ 1133  ./configure
+ 1134  make && make install
+ 1135  cd ../httpd-2.4.28/
+ 1136  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util
+ 1137  make && make install
+ 1138  make --with-included-apr && make install
+ 1139  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util --with-included-apr
+ 1140  ./configure --help | grep apr
+ 1141  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util --with-apr=/usr/local/apr
+ 1142  make && make install
+ 1143  ./configure --help | grep apr
+ 1144  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util --with-apr=/usr/local/apr --with-included-apr
+ 1145  ./configure --prefix=/usr/local/apache2 --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util/ --with-pcre --enable-mods-shared=most --enable-so
+ 1146  make && make install
+ 1147  make clean
+ 1148  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util --with-apr=/usr/local/apr --libdir=/usr/lib64
+ 1149  make && make install
+ 1150  mkdir /usr/local/httpd/lib
+ 1151  mkdir -p /usr/local/httpd/lib
+ 1152  cp /usr/local/aprlib/libapr-1.la /usr/local/httpd/lib/
+ 1153  make && make install
+ 1154  ./configure --help | grep apr
+ 1155  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util --with-included-apr
+ 1156  ll ..
+ 1157  cd ..
+ 1158  ll /usr/local/src/
+ 1159  cp -rf apr-1.6.2 /usr/local/src/httpd-2.4.28/srclib/apr
+ 1160  mkdir -p /usr/local/src/httpd-2.4.18/srclib/apr
+ 1161  mkdir -p /usr/local/src/httpd-2.4.28/srclib/apr
+ 1162  cp -rf apr-1.6.2 /usr/local/src/httpd-2.4.28/srclib/apr
+ 1163  mkdir -p /usr/local/src/httpd-2.4.28/srclib/apr-util
+ 1164  cp apr-util-1.6.0 /usr/local/src/httpd-2.4.28/srclib/apr-util
+ 1165  rm -rf /usr/local/src/httpd-2.4.28/srclib/*
+ 1166  cp -rf apr-1.6.2 /usr/local/src/httpd-2.4.28/srclib/apr
+ 1167  cp apr-util-1.6.0 /usr/local/src/httpd-2.4.28/srclib/apr-util
+ 1168  cp -rf apr-util-1.6.0 /usr/local/src/httpd-2.4.28/srclib/apr-util
+ 1169  cd -
+ 1170  make && make install
+ 1171  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util --with-included-apr
+ 1172  cd /usr/local/src/httpd-2.4.28/
+ 1173  ll
+ 1174  mv srclib/ /home/yum/httpd-2.4.28/
+ 1175  rm -rf /home/yum/httpd-2.4.28/srclib
+ 1176  mv srclib/ /home/yum/httpd-2.4.28/
+ 1177  cd -
+ 1178  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util --with-included-apr
+ 1179  make && make install
+ 1180  ll
+ 1181  make && make install
+ 1182  make all
+ 1183  make
+ 1184  ls
+ 1185  make
+ 1186  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util
+ 1187  make && make install
+ 1188  ls
+ 1189  rm -rf srclib/
+ 1190  ll
+ 1191  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util --with-included-apr
+ 1192  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util --with-apr=/usr/local/apr
+ 1193  make && make install
+ 1194  rm -rf *
+ 1195  cd ..
+ 1196  tar -xf httpd-2.4.28.tar.gz
+ 1197  cd httpd-2.4.28/
+ 1198  ll
+ 1199  ./configure --prefix=/usr/local/apache2 --with-apr-util=/usr/local/apr-util
+ 1200  make && make install
+ 1201  ./configure --with-included-apr
+ 1202  ls
+ 1203  cd srclib/
+ 1204  tar -xf ../../apr-1.6.2.tar.gz
+ 1205  tar -xf ../../apr-util-1.6.0.tar.gz
+ 1206  ll
+ 1207  mv apr-1.6.2/ apr
+ 1208  mv apr-util-1.6.0/ apr-util
+ 1209  cd ..
+ 1210  ./configure --with-included-apr
+ 1211  make && make install
+ 1212  cd ..
+ 1213  ll
+ 1214  cd yum/
+ 1215  ll
+ 1216  tar -xf php-7.1.10.tar.gz
+ 1217  ll
+ 1218  cd php-7.1.10/
+ 1219  ll
+ 1220  ls
+ 1221  ./configure --prefix=/usr/local/php --with-apxs2=/usr/local/apache2/bin/apxs
+ 1222  make && make install
+ 1223  make
+ 1224  yum install --downloadonly --downloaddir=. libxml2
+ 1225  yum install libxml2
+ 1226  ./configure --help
+ 1227  ./configure --help | grep xml2-config
+ 1228  ./configure --help | grep xml2
+ 1229  yum install libxml2
+ 1230  yum search libxml2
+ 1231  rpm -qa|grep libxml2
+ 1232  rpm -ql libxml2-2.9.1-5.el7_1.2.x86_64
+ 1233  ./configure --help | grep xml2
+ 1234  ll /usr/lib64/libxml2.so.2
+ 1235  ./configure --prefix=/usr/local/php --with-apxs2=/usr/local/apache2/bin/apxs --with-libxml-dir=/usr/lib64/
+ 1236  rpm -ql libxml2-2.9.1-5.el7_1.2.x86_64
+ 1237  ll
+ 1238  ls
+ 1239  find / -name "xml2-config"
+ 1240  ll /home/fpwork/lingyuji/build/RCP_Tools/RCP_COMMON_0.0.7204/rcp_common-devel_r7204-160415-020141-sysroot/usr/bin/xml2-config
+ 1241  yum install libxml2
+ 1242  yum install libxml2-devel -y
+ 1243  ip a s
+ 1244  cd ..
+ 1245  mkdir rpm
+ 1246  cd rpm/
+ 1247  ll
+ 1248  pwd
+ 1249  ll
+ 1250  rpm -ihv *.rpm
+ 1251  rpm -ihv *.rpm -f
+ 1252  rpm -ihv libxml2-devel-2.9.1-6.el7_2.3.x86_64.rpm -f
+ 1253  rpm -ihv xz-devel-5.2.2-1.el7.x86_64.rpm -f
+ 1254  rpm -ihv xz-5.2.2-1.el7.x86_64.rpm -f
+ 1255  rpm -ihv xz-libs-5.2.2-1.el7.x86_64.rpm -f
+ 1256  rpm -ihv xz-5.2.2-1.el7.x86_64.rpm -f
+ 1257  rpm -ihv xz-devel-5.2.2-1.el7.x86_64.rpm -f
+ 1258  rpm -ihv libxml2-devel-2.9.1-6.el7_2.3.x86_64.rpm -f
+ 1259  yum install zlib-devel --downloadonly --downloaddir=.
+ 1260  vi /etc/yum.conf
+ 1261  ll /etc/yum*
+ 1262  ll -d /etc/yum*
+ 1263  mkdir yum_bak;cp -r /etc/yum* yum_bak
+ 1264  ll yum_bak/
+ 1265  ll -R yum_bak/
+ 1266  yum install libxml2
+ 1267  ll -d /etc/yum*
+ 1268  ll /etc/yum
+ 1269  ll /etc/yum/yum
+ 1270  cd ..
+ 1271  ll
+ 1272  ll /etc/yum
+ 1273  yum install libxml2
+ 1274  cd php-7.1.10/
+ 1275  ll
+ 1276  ./configure --prefix=/usr/local/php
+ 1277  pwd
+ 1278  ./configure --prefix=/usr/local/php --with-apxs2=/usr/local/apache2/bin/apxs
+ 1279  make && make install
+ 1280  vi /usr/local/apache2/conf/httpd.conf
+ 1281  /usr/local/apache2/bin/htpasswd -c /usr/local/nagios/etc/htpasswd ca_hzcbtsscm
+ 1282  /usr/local/apache2/bin/apachectl start
+ 1283  vi +499 /usr/local/apache2/conf/httpd.conf
+ 1284  /usr/local/apache2/bin/apachectl start
+ 1285  netstat -apln | grep 8080
+ 1286  netstat -apln | grep 80
+ 1287  /usr/local/apache2/bin/apachectl start
+ 1288  vi +513 /usr/local/apache2/conf/httpd.conf
+ 1289  /usr/local/apache2/bin/apachectl start
+ 1290  netstat -apln | grep 80
+ 1291  ip a s
+ 1292  /usr/local/apache2/bin/apachectl stop
+ 1293  netstat -apln | grep 80
+ 1294  vi +513 /usr/local/apache2/conf/httpd.conf
+ 1295  netstat -apln | grep 80
+ 1296  /usr/local/apache2/bin/apachectl start
+ 1297  netstat -apln | grep 80
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   999  cd /home/yum/
+ 1000  ll
+ 1001  tar -xf libxml2-2.7.8.tar.gz
+ 1002  ll
+ 1003  cd libxml2-2.7.8/
+ 1004  ll
+ 1005  ls
+ 1006  ./configure
+ 1007  make
+ 1008  make install
+
+ 
+ 
+ 
+ 
+ [root@hzlinea10 yum]# ll
+total 154188
+drwxr-xr-x. 28 lingyuji lingyuji      4096 Oct 17 10:21 apr-1.6.2
+-rw-r--r--.  1 root     root       1071074 Oct 17 10:27 apr-1.6.2.tar.gz
+drwxr-xr-x. 21 y75zhang y75zhang      4096 Oct 17 10:31 apr-util-1.6.0
+-rw-r--r--.  1 root     root        565507 Oct 17 10:30 apr-util-1.6.0.tar.gz
+drwxrwxrwx. 13 root     root          4096 Oct 17 10:30 expat-2.0.1
+-rw-r--r--.  1 root     root        446456 Oct 17 10:42 expat-2.0.1.tar.gz
+drwxr-xr-x. 12      501 games         4096 Oct 17 11:17 httpd-2.4.28
+-rw-r--r--.  1 root     root       8628454 Oct  3 19:48 httpd-2.4.28.tar.gz
+drwxrwxr-x. 17    50138       69      8192 Oct 17 13:16 libxml2-2.7.8
+-rw-r--r--.  1 root     root       4881808 Oct 17 13:26 libxml2-2.7.8.tar.gz
+drwxrwxr-x. 18 root     root          4096 Oct 17 09:56 nagios-4.3.4
+-rw-r--r--.  1 root     root      11101966 Oct 17 10:07 nagios-4.3.4.tar.gz
+drwxr-xr-x. 15 root     root          4096 Oct 17 10:05 nagios-plugins-2.2.1
+-rw-r--r--.  1 root     root       2728818 Oct 17 10:16 nagios-plugins-2.2.1.tar.gz
+drwxr-xr-x.  9     1169     1169      8192 Oct 17 10:37 pcre-8.41
+-rw-r--r--.  1 root     root       2068775 Oct 17 10:30 pcre-8.41.tar.gz
+drwxrwxr-x. 19 y75zhang y75zhang      4096 Oct 17 13:23 php-7.1.10
+-rw-r--r--.  1 root     root     126320640 Oct 17 11:39 php-7.1.10.tar.gz
+drwxr-xr-x.  3 root     root          4096 Oct 17 12:34 rpm
