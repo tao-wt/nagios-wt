@@ -1,3 +1,6 @@
+如果host 的IP是映射的，则服务绑定的IP要用host真实的ip
+如果用映射ip监控服务会启动失败
+
 999  yum install nagios
  1000  yum makecache fast
  1001  yum install nagios
